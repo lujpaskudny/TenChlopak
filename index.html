@@ -207,6 +207,52 @@ a:link {
 }
 </style>
 
+	<style>
+  .teczowy-link {
+    /* 1. Rozmiar i wygląd tekstu */
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    display: inline-block;
+
+    /* POPRAWKA NA UCINANIE LITER (j, g, y, p, ą, ę) */
+    line-height: 1.4;
+    padding: 4px 0;
+
+    /* 2. Ciemniejsze, wyraźne kolory tęczy */
+    background: linear-gradient(
+      to right, 
+      #d90429,
+      #e85d04,
+      #ca6702,
+      #007f5f,
+      #00509d,
+      #5a189a,
+      #d90429
+    );
+    background-size: 200% auto;
+    
+    /* 3. Wycięcie tła do kształtu liter */
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 4. Animacja przesuwania */
+    animation: ruch-teczy 3s linear infinite;
+  }
+
+  .teczowy-link:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+  }
+
+  @keyframes ruch-teczy {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+  }
+</style>
+
     <!-- START - Open Graph and Twitter Card Tags 3.4.0 -->
      <!-- Facebook Open Graph -->
       <meta property="og:site_name" content="ever dream this man?"/>
@@ -308,7 +354,7 @@ That portrait li"/>
 			<div class="entry-the-content">
 
 
-				<a href="https://tenchlopak.pl/portrait/index.html" style="font-size: 20px;"><strong>Kliknij Tutaj aby przejsc do strony z duzo dokladniejszymi szkicami tego chlopaka</a> <br><br></a>
+				<a href="https://tenchlopak.pl/portrait/index.html" class="teczowy-link">Kliknij Tutaj aby przejsc do strony z duzo dokladniejszymi szkicami tego chlopaka</a>
 				
 <h2 class="wp-block-heading">Wszystko zaczęło się w cieniu, w przestrzeni, którą każdy z nas uważał za całkowicie prywatną – w naszych snach. Grupa znajomych ze Stalowej Woli, wymieniając się doświadczeniami z niespokojnych nocy, odkryła niewytłumaczalny schemat.</h2>
 
